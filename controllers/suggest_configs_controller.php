@@ -37,7 +37,7 @@ class SuggestConfigsController extends PluginsController {
  */
 	var $name = 'SuggestConfigs';
 /**
- * クラス名
+ * モデル
  * 
  * @var array
  * @access public
