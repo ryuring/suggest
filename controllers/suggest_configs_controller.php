@@ -1,7 +1,7 @@
 <?php
 /* SVN FILE: $Id$ */
 /**
- * サジェストコントローラー
+ * サジェスト設定コントローラー
  *
  * PHP versions 4 and 5
  *
