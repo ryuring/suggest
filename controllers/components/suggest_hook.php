@@ -1,23 +1,21 @@
 <?php
-/* SVN FILE: $Id: suggest_hook.php 70 2011-05-18 10:16:45Z ryuring $ */
+/* SVN FILE: $Id$ */
 /**
- * サジェストフックコンポーネント
+ * [Suggest] フックコンポーネント
  *
- * PHP versions 4 and 5
+ * PHP version 5
  *
- * BaserCMS :  Based Website Development Project <http://basercms.net>
- * Copyright 2011 - 2011, Catchup, Inc.
- *								9-5 nagao 3-chome, fukuoka-shi
- *								fukuoka, Japan 814-0123
+ * baserCMS :  Based Website Development Project <http://basercms.net>
+ * Copyright 2008 - 2012, baserCMS Users Community <http://sites.google.com/site/baserusers/>
  *
- * @copyright		Copyright 2011 - 2011, Catchup, Inc.
- * @link			http://basercms.net BaserCMS Project
+ * @copyright		Copyright 2011 - 2012, Catchup, Inc.
+ * @link			http://www.e-catchup.jp Catchup, Inc.
  * @package			suggest.controllers.components
- * @since			Baser v 1.6.11
- * @version			$Revision: 70 $
- * @modifiedby		$LastChangedBy: ryuring $
- * @lastmodified	$Date: 2011-05-18 19:16:45 +0900 (水, 18 5 2011) $
- * @license			http://basercms.net/license/index.html
+ * @since			Baser v 2.0.0
+ * @version			$Revision$
+ * @modifiedby		$LastChangedBy$
+ * @lastmodified	$Date$
+ * @license			MIT lincense
  */
 /**
  * Include files

@@ -1,22 +1,21 @@
 <?php
+/* SVN FILE: $Id$ */
 /**
- * [ADMIN] サジェスト設定 メニュー
+ * [Suggest] サブメニュー
  *
- * PHP versions 4 and 5
+ * PHP version 5
  *
- * BaserCMS :  Based Website Development Project <http://basercms.net>
- * Copyright 2008 - 2011, Catchup, Inc.
- *								9-5 nagao 3-chome, fukuoka-shi
- *								fukuoka, Japan 814-0123
+ * baserCMS :  Based Website Development Project <http://basercms.net>
+ * Copyright 2008 - 2012, baserCMS Users Community <http://sites.google.com/site/baserusers/>
  *
- * @copyright		Copyright 2008 - 2011, Catchup, Inc.
- * @link			http://basercms.net BaserCMS Project
- * @package			baser.views
- * @since			Baser v 0.1.0
- * @version			$Revision: 154 $
- * @modifiedby		$LastChangedBy: ryuring $
- * @lastmodified	$Date: 2011-09-21 12:17:13 +0900 (水, 21 9 2011) $
- * @license			http://basercms.net/license/index.html
+ * @copyright		Copyright 2011 - 2012, Catchup, Inc.
+ * @link			http://www.e-catchup.jp Catchup, Inc.
+ * @package			suggest.views
+ * @since			Baser v 2.0.0
+ * @version			$Revision$
+ * @modifiedby		$LastChangedBy$
+ * @lastmodified	$Date$
+ * @license			MIT lincense
  */
 ?>
 
