@@ -38,7 +38,7 @@ class SuggestHookHelper extends AppHelper {
 	function beforeRender() {
 		parent::beforeRender();
 		$view =& ClassRegistry::getObject('view');
-		$baser = $view->loaded['baser'];
+		$baser = $view->loaded['bcBaser'];
 		if(empty($view->params['admin']) && $baser) {
 			$baser->js('/suggest/js/jquery.autocomplete', false);
 			$baser->css('/suggest/css/jquery.autocomplete', null, null, false);

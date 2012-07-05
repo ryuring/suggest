@@ -1,5 +1,5 @@
 <?php 
-/* SVN FILE: $Id$ */
+/* SVN FILE: $Id: suggest_configs.php 70 2011-05-18 10:16:45Z ryuring $ */
 /* SuggestConfigs schema generated on: 2011-05-13 11:05:03 : 1305252243*/
 class SuggestConfigsSchema extends CakeSchema {
 	var $name = 'SuggestConfigs';

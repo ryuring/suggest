@@ -1,5 +1,5 @@
 <?php
-/* SVN FILE: $Id$ */
+/* SVN FILE: $Id: suggest_hook.php 70 2011-05-18 10:16:45Z ryuring $ */
 /**
  * サジェストフックコンポーネント
  *
@@ -7,16 +7,16 @@
  *
  * BaserCMS :  Based Website Development Project <http://basercms.net>
  * Copyright 2011 - 2011, Catchup, Inc.
- *								1-19-4 ikinomatsubara, fukuoka-shi
- *								fukuoka, Japan 819-0055
+ *								9-5 nagao 3-chome, fukuoka-shi
+ *								fukuoka, Japan 814-0123
  *
  * @copyright		Copyright 2011 - 2011, Catchup, Inc.
  * @link			http://basercms.net BaserCMS Project
  * @package			suggest.controllers.components
  * @since			Baser v 1.6.11
- * @version			$Revision$
- * @modifiedby		$LastChangedBy$
- * @lastmodified	$Date$
+ * @version			$Revision: 70 $
+ * @modifiedby		$LastChangedBy: ryuring $
+ * @lastmodified	$Date: 2011-05-18 19:16:45 +0900 (水, 18 5 2011) $
  * @license			http://basercms.net/license/index.html
  */
 /**

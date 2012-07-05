@@ -44,12 +44,22 @@ class SuggestController extends PluginsController {
  */
 	var $uses = array('Plugin', 'Suggest.SuggestKeyword');
 /**
- * クラス名
+ * コンポーネント
  * 
  * @var array
  * @access public
  */
-	var $components = array('RequestHandler');
+	var $components = array('RequestHandler', 'BcAuth', 'Cookie', 'BcAuthConfigure');
+/**
+ * beforeFilter
+ */
+	function beforeFilter() {
+
+		parent::beforeFilter();
+		// 認証設定
+		$this->BcAuth->allow('ajax_keyword');
+
+	}
 /**
  * [AJAX] サジェストキーワードを取得
  * 
@@ -120,5 +130,22 @@ class SuggestController extends PluginsController {
 		return $query;
 		
 	}
-	
+/**
+ * [ADMIN] 検索履歴を削除する
+ *
+ * @return void
+ * @access public
+ */
+	function admin_delete() {
+
+		if($this->SuggestKeyword->deleteAll('1 = 1')) {
+			$this->Session->setFlash('検索履歴を削除しました。');
+		} else {
+			$this->Session->setFlash('検索履歴の削除処理に失敗しました。');
+		}
+
+		$this->redirect(array('controller' => 'suggest_configs', 'action' => 'index'));
+
+	}
+
 }

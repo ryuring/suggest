@@ -1,5 +1,5 @@
 <?php 
-/* SVN FILE: $Id$ */
+/* SVN FILE: $Id: suggest_keywords.php 70 2011-05-18 10:16:45Z ryuring $ */
 /* SuggestKeywords schema generated on: 2011-05-13 11:05:23 : 1305253103*/
 class SuggestKeywordsSchema extends CakeSchema {
 	var $name = 'SuggestKeywords';

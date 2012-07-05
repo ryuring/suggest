@@ -1,5 +1,5 @@
 <?php
-/* SVN FILE: $Id$ */
+/* SVN FILE: $Id: suggest_config.php 70 2011-05-18 10:16:45Z ryuring $ */
 /**
  * サジェスト設定モデル
  *

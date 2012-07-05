@@ -1,22 +1,22 @@
 <?php
-/* SVN FILE: $Id$ */
+/* SVN FILE: $Id: suggest_configs_controller.php 1376 2011-10-24 04:32:40Z arata $ */
 /**
- * サジェスト設定コントローラー
+ * サジェストコントローラー
  *
  * PHP versions 4 and 5
  *
  * BaserCMS :  Based Website Development Project <http://basercms.net>
  * Copyright 2011 - 2011, Catchup, Inc.
- *								1-19-4 ikinomatsubara, fukuoka-shi
- *								fukuoka, Japan 819-0055
+ *								9-5 nagao 3-chome, fukuoka-shi
+ *								fukuoka, Japan 814-0123
  *
  * @copyright		Copyright 2011 - 2011, Catchup, Inc.
  * @link			http://basercms.net BaserCMS Project
  * @package			suggest.controllers
  * @since			Baser v 1.6.11
- * @version			$Revision$
- * @modifiedby		$LastChangedBy$
- * @lastmodified	$Date$
+ * @version			$Revision: 1376 $
+ * @modifiedby		$LastChangedBy: arata $
+ * @lastmodified	$Date: 2011-10-24 13:32:40 +0900 (月, 24 10 2011) $
  * @license			http://basercms.net/license/index.html
  */
 /**
@@ -44,12 +44,12 @@ class SuggestConfigsController extends PluginsController {
  */
 	var $uses = array('Plugin', 'Suggest.SuggestConfig', 'Suggest.SuggestKeyword');
 /**
- * コンポーネント
+ * サブメニューエレメント
  *
  * @var array
  * @access public
  */
-	var $components = array('AuthEx','Cookie','AuthConfigure');
+	var $subMenuElements = array('suggest');
 /**
  * [ADMIN] サジェスト設定
  *
