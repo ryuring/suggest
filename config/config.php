@@ -21,6 +21,6 @@ $title = 'サジェスト';
 $description = 'サイト内検索のキーワード入力時にキーワードの候補を表示するプラグインです。';
 $author = 'ryuring';
 $url = 'http://www.e-catchup.jp';
-$adminLink = '/admin/suggest/suggest_configs';
+$adminLink = array('plugin' => 'suggest', 'controller' => 'suggest_configs', 'action' => 'index');
 $installMessage = '';
 ?>
