@@ -93,12 +93,12 @@ class SuggestConfigsController extends PluginsController {
 
 				}
 				
-				$this->Session->setFlash('サジェスト設定を保存しました。');
+				$this->setMessage('サジェスト設定を保存しました。');
 				$this->redirect('index');
 				
 			} else {
 				
-				$this->Session->setFlash('入力エラーです。内容を修正してください。');
+				$this->setMessage('入力エラーです。内容を修正してください。', true);
 				
 			}
 			

@@ -137,9 +137,9 @@ class SuggestController extends PluginsController {
 	function admin_delete() {
 
 		if($this->SuggestKeyword->deleteAll('1 = 1')) {
-			$this->Session->setFlash('検索履歴を削除しました。');
+			$this->setMessage('検索履歴を削除しました。');
 		} else {
-			$this->Session->setFlash('検索履歴の削除処理に失敗しました。');
+			$this->setMessage('検索履歴の削除処理に失敗しました。', true);
 		}
 
 		$this->redirect(array('controller' => 'suggest_configs', 'action' => 'index'));
