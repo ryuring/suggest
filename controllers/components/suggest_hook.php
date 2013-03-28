@@ -40,7 +40,7 @@ class SuggestHookComponent extends Object {
  * @return void
  * @access public
  */
-	function startup(&$controller) {
+	function startup($controller) {
 
 		if ($controller->name == 'Contents' && $controller->action == 'search') {
 			
