@@ -26,32 +26,32 @@ App::import('Controller', 'Plugins');
  *
  * @package	suggest.controllers
  */
-class SuggestController extends PluginsController {
+class SuggestController extends BcPluginAppController {
 /**
  * クラス名
  * 
  * @var string
  * @access public
  */
-	var $name = 'SuggestController';
+	public $name = 'SuggestController';
 /**
  * クラス名
  * 
  * @var array
  * @access public
  */
-	var $uses = array('Plugin', 'Suggest.SuggestKeyword');
+	public $uses = array('Plugin', 'Suggest.SuggestKeyword');
 /**
  * コンポーネント
  * 
  * @var array
  * @access public
  */
-	var $components = array('RequestHandler', 'BcAuth', 'Cookie', 'BcAuthConfigure');
+	public $components = array('RequestHandler', 'BcAuth', 'Cookie', 'BcAuthConfigure');
 /**
  * beforeFilter
  */
-	function beforeFilter() {
+	public function beforeFilter() {
 
 		parent::beforeFilter();
 		// 認証設定
@@ -64,14 +64,14 @@ class SuggestController extends PluginsController {
  * @return $suggestKeywords （echo で出力）
  * @access public
  */
-	function ajax_keyword() {
+	public function ajax_keyword() {
 		
 		if(isset($this->params['url']['q'])) {
 			
 			$default = array('named' => array('num' => 10));
 			$this->setViewConditions('SuggestKeyword', array('default' => $default, 'type' => 'get'));
 			$suggestKeywords = $this->SuggestKeyword->find('all', array(
-				'conditions'=> $this->_createSuggestConditions($this->data),
+				'conditions'=> $this->_createSuggestConditions($this->request->data),
 				'fields'	=> array('SuggestKeyword.name'),
 				'order'		=> 'SuggestKeyword.views DESC',
 				'limit'		=> $this->passedArgs['num']
@@ -92,7 +92,7 @@ class SuggestController extends PluginsController {
  * @return	array	$conditions
  * @access	protected
  */
-	function _createSuggestConditions($data) {
+	public function _createSuggestConditions($data) {
 		
 		$query = '';
 		if(isset($data['SuggestKeyword']['q'])) {
@@ -117,7 +117,7 @@ class SuggestController extends PluginsController {
  * @return array
  * @access protected
  */
-	function _parseQuery($query) {
+	public function _parseQuery($query) {
 		
 		$query = str_replace('　', ' ', $query);
 		if(strpos($query, ' ') !== false) {
@@ -134,7 +134,7 @@ class SuggestController extends PluginsController {
  * @return void
  * @access public
  */
-	function admin_delete() {
+	public function admin_delete() {
 
 		if($this->SuggestKeyword->deleteAll('1 = 1')) {
 			$this->setMessage('検索履歴を削除しました。');

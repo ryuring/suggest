@@ -1,7 +1,7 @@
 <?php
 /* SVN FILE: $Id$ */
 /**
- * [Suggest] サブメニュー
+ * [Suggest] 設定モデル
  *
  * PHP version 5
  *
@@ -10,23 +10,19 @@
  *
  * @copyright		Copyright 2011 - 2012, Catchup, Inc.
  * @link			http://www.e-catchup.jp Catchup, Inc.
- * @package			suggest.views
+ * @package			suggest.models
  * @since			Baser v 2.0.0
  * @version			$Revision$
  * @modifiedby		$LastChangedBy$
  * @lastmodified	$Date$
  * @license			MIT lincense
  */
-?>
-
-
-<tr>
-	<th>サジェストプラグインメニュー</th>
-	<td>
-		<ul class="cleafix">
-			<li>
-				<?php $bcBaser->link('検索履歴を削除する', array('plugin' => 'suggest', 'controller' => 'suggest', 'action' => 'delete'), array(), '本当に検索履歴を削除して良いですか？') ?>
-			</li>
-		</ul>
-	</td>
-</tr>
+/**
+ * Include files
+ */
+/**
+ * サジェスト設定モデル
+ *
+ * @package			baser.plugins.uploader.models
+ */
+class SuggestConfig extends BcPluginAppModel {}

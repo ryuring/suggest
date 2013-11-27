@@ -20,5 +20,4 @@
 /**
  * データベース初期化
  */
-	$this->Plugin->initDb('suggest');
-?>
+	$this->Plugin->initDb('plugin', 'Suggest');

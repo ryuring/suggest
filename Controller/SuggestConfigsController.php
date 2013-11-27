@@ -26,56 +26,56 @@ App::import('Controller', 'Plugins');
  *
  * @package	suggest.controllers
  */
-class SuggestConfigsController extends PluginsController {
+class SuggestConfigsController extends BcPluginAppController {
 /**
  * クラス名
  * 
  * @var string
  * @access public
  */
-	var $name = 'SuggestConfigs';
+	public $name = 'SuggestConfigs';
 /**
  * モデル
  * 
  * @var array
  * @access public
  */
-	var $uses = array('Plugin', 'Suggest.SuggestConfig', 'Suggest.SuggestKeyword');
+	public $uses = array('Plugin', 'Suggest.SuggestConfig', 'Suggest.SuggestKeyword');
 /**
  * サブメニューエレメント
  *
  * @var array
  * @access public
  */
-	var $subMenuElements = array('suggest');
+	public $subMenuElements = array('suggest');
 /**
  * [ADMIN] サジェスト設定
  *
  * @return	void
  * @access	public
  */
-	function admin_index() {
+	public function admin_index() {
 		
 		$this->pageTitle = 'サジェスト設定';
 		
-		if(!$this->data) {
+		if(!$this->request->data) {
 			
-			$this->data['SuggestConfig'] = $this->SuggestConfig->findExpanded();
+			$this->request->data['SuggestConfig'] = $this->SuggestConfig->findExpanded();
 			
 		} else {
 			
-			$this->data['SuggestConfig']['exclude_keywords'] = mb_convert_kana(strtolower($this->data['SuggestConfig']['exclude_keywords']), 'a', Configure::read('App.encoding'));
-			$this->SuggestConfig->set($this->data);
+			$this->request->data['SuggestConfig']['exclude_keywords'] = mb_convert_kana(strtolower($this->request->data['SuggestConfig']['exclude_keywords']), 'a', Configure::read('App.encoding'));
+			$this->SuggestConfig->set($this->request->data);
 			
 			if($this->SuggestConfig->validates()) {
 				
-				$this->SuggestConfig->saveKeyValue($this->data);
+				$this->SuggestConfig->saveKeyValue($this->request->data);
 				
 				// 除外キーワードを削除
-				if($this->data['SuggestConfig']['exclude_keywords']) {
+				if($this->request->data['SuggestConfig']['exclude_keywords']) {
 
 					$excludeKeywords = array();
-					$excludeKeywords = explode(',', $this->data['SuggestConfig']['exclude_keywords']);
+					$excludeKeywords = explode(',', $this->request->data['SuggestConfig']['exclude_keywords']);
 					$conditions = array();
 
 					foreach($excludeKeywords as $key => $value) {

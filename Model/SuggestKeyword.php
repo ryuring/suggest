@@ -1,7 +1,7 @@
 <?php
 /* SVN FILE: $Id$ */
 /**
- * [Suggest] 設定モデル
+ * [Suggest] サジェストキーワードモデル
  *
  * PHP version 5
  *
@@ -21,30 +21,8 @@
  * Include files
  */
 /**
- * サジェスト設定モデル
+ * サジェストキーワードモデル
  *
- * @package			baser.plugins.uploader.models
+ * @package	suggest.models
  */
-class SuggestConfig extends AppModel {
-/**
- * モデル名
- * @var     string
- * @access  public
- */
-	var $name = 'SuggestConfig';
-/**
- * データソース
- *
- * @var		string
- * @access 	public
- */
-	var $useDbConfig = 'plugin';
-/**
- * プラグイン名
- *
- * @var		string
- * @access 	public
- */
-	var $plugin = 'Suggest';
-
-}
+class SuggestKeyword extends BcPluginAppModel {}
