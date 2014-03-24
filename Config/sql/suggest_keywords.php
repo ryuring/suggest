@@ -2,20 +2,20 @@
 /* SVN FILE: $Id: suggest_keywords.php 70 2011-05-18 10:16:45Z ryuring $ */
 /* SuggestKeywords schema generated on: 2011-05-13 11:05:23 : 1305253103*/
 class SuggestKeywordsSchema extends CakeSchema {
-	var $name = 'SuggestKeywords';
+	public $name = 'SuggestKeywords';
 
-	var $file = 'suggest_keywords.php';
+	public $file = 'suggest_keywords.php';
 
-	var $connection = 'plugin';
+	public $connection = 'plugin';
 
-	function before($event = array()) {
+	public function before($event = array()) {
 		return true;
 	}
 
-	function after($event = array()) {
+	public function after($event = array()) {
 	}
 
-	var $suggest_keywords = array(
+	public $suggest_keywords = array(
 		'id' => array('type' => 'integer', 'null' => false, 'default' => NULL, 'length' => 8, 'key' => 'primary'),
 		'name' => array('type' => 'string', 'null' => true, 'default' => NULL, 'length' => 100),
 		'views' => array('type' => 'integer', 'null' => true, 'default' => NULL, 'length' => 8),
