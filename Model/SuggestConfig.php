@@ -25,4 +25,4 @@
  *
  * @package			baser.plugins.uploader.models
  */
-class SuggestConfig extends BcPluginAppModel {}
+class SuggestConfig extends AppModel {}

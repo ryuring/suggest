@@ -25,4 +25,4 @@
  *
  * @package	suggest.models
  */
-class SuggestKeyword extends BcPluginAppModel {}
+class SuggestKeyword extends AppModel {}

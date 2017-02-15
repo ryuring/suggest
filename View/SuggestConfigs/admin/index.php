@@ -21,7 +21,7 @@
 
 
 <!-- form -->
-<?php echo $this->BcForm->create('SuggestConfig', array('action' => 'index')) ?>
+<?php echo $this->BcForm->create('SuggestConfig', array('url' => ['action' => 'index'])) ?>
 
 <table cellpadding="0" cellspacing="0" class="form-table">
 	<tr>
