@@ -25,10 +25,11 @@ class SuggestViewEventListener extends BcViewEventListener {
 			$url = $View->BcBaser->getUrl('/suggest/suggest/ajax_keyword');
 			$script = <<< DOC_END
 $(document).ready(function(){
-    $('#ContentQ').autocomplete('{$url}',{
+    $('#SearchIndexQ').autocomplete('{$url}',{
 		scroll:false,
+		noRecord:'',
 		onItemSelect:function(){
-			$("#ContentSearchForm").submit();
+			$("#SearchIndexSearchForm").submit();
 		}
 	});
 });

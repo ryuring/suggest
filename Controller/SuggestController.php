@@ -26,7 +26,7 @@ App::import('Controller', 'Plugins');
  *
  * @package	suggest.controllers
  */
-class SuggestController extends BcPluginAppController {
+class SuggestController extends AppController {
 /**
  * クラス名
  * 

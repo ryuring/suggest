@@ -26,7 +26,7 @@ App::import('Controller', 'Plugins');
  *
  * @package	suggest.controllers
  */
-class SuggestConfigsController extends BcPluginAppController {
+class SuggestConfigsController extends AppController {
 /**
  * クラス名
  * 
@@ -88,7 +88,7 @@ class SuggestConfigsController extends BcPluginAppController {
 					));
 
 					foreach($suggestKeywords as $suggestKeyword) {
-						$this->SuggestKeyword->del($suggestKeyword['SuggestKeyword']['id']);
+						$this->SuggestKeyword->delete($suggestKeyword['SuggestKeyword']['id']);
 					}
 
 				}
