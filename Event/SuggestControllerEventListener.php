@@ -3,7 +3,7 @@ class SuggestControllerEventListener extends BcControllerEventListener {
 /**
  * イベント
  */
-	public $events = array('Contents.startup');
+	public $events = array('SearchIndices.startup');
 /**
  * startup
  *
@@ -11,7 +11,7 @@ class SuggestControllerEventListener extends BcControllerEventListener {
  * @return void
  * @access public
  */
-	public function contentsStartup(CakeEvent $event) {
+	public function searchIndicesStartup(CakeEvent $event) {
 
 		$Controller = $event->subject();
 		if ($Controller->request->action != 'search') {
@@ -21,7 +21,7 @@ class SuggestControllerEventListener extends BcControllerEventListener {
 		$SuggestConfig = ClassRegistry::init('Suggest.SuggestConfig');
 		$suggestConfigs = $SuggestConfig->findExpanded();
 		$excludeKeywords = array();
-		if($suggestConfigs['exclude_keywords']) {
+		if(!empty($suggestConfigs['exclude_keywords'])) {
 			$excludeKeywords = explode(',',$suggestConfigs['exclude_keywords']);
 		}
 		// 検索キーワードを複合キーワードとして３つまで保存する

@@ -88,7 +88,7 @@ class SuggestConfigsController extends AppController {
 					));
 
 					foreach($suggestKeywords as $suggestKeyword) {
-						$this->SuggestKeyword->del($suggestKeyword['SuggestKeyword']['id']);
+						$this->SuggestKeyword->delete($suggestKeyword['SuggestKeyword']['id']);
 					}
 
 				}
